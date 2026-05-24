@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<script type=text/javascript> 
+function check( ) 
+{    if ((document.form1.username.value == "") || (document.form1.password.value == "") || (document.form1.registrationnumber.value == "") || (document.form1.password.value == "") || (document.form1.donorfullname.value == "") || (document.form1.outletname.value == "") || (document.form1.donoremail.value == "") || (document.form1.donorcontact_num.value == "") || (document.form1.donoraddress.value == "") || (document.form1.dstate.value == "") || (document.form1.dpostcode.value == "")) 
+
+{       alert("Please enter all fields");     
+         return false;                  } 
+    else        return true; }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <link rel="shortcut icon" href="images/logo/favicon.ico" type="image/x-icon" />
+    <title>Sign Up Form As Donor</title>
+<!-- Bootstrap CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- Font Awesome CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="register/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="register/css/style.css">
+
+    <!-- Extra css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <style>
+        .error {color: #FF0000;}
+        h2 {
+    line-height: 1.66;
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+    color: #222;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* 
+---------------------------------------------
+Pre Loader
+--------------------------------------------- 
+*/
+
+.js-preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    opacity: 1;
+    visibility: visible;
+    z-index: 9999;
+    -webkit-transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease;
+}
+
+.js-preloader.loaded {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+@-webkit-keyframes dot {
+    50% {
+        -webkit-transform: translateX(96px);
+        transform: translateX(96px);
+    }
+}
+
+@keyframes dot {
+    50% {
+        -webkit-transform: translateX(96px);
+        transform: translateX(96px);
+    }
+}
+
+@-webkit-keyframes dots {
+    50% {
+        -webkit-transform: translateX(-31px);
+        transform: translateX(-31px);
+    }
+}
+
+@keyframes dots {
+    50% {
+        -webkit-transform: translateX(-31px);
+        transform: translateX(-31px);
+    }
+}
+
+.preloader-inner {
+    position: relative;
+    width: 142px;
+    height: 40px;
+    background: #fff;
+}
+
+.preloader-inner .dot {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: 12px;
+    left: 15px;
+    background: #8d99af;
+    border-radius: 50%;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    -webkit-animation: dot 2.8s infinite;
+    animation: dot 2.8s infinite;
+}
+
+.preloader-inner .dots {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    margin-top: 12px;
+    margin-left: 31px;
+    -webkit-animation: dots 2.8s infinite;
+    animation: dots 2.8s infinite;
+}
+
+.preloader-inner .dots span {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-left: 16px;
+    background: #8d99af;
+    border-radius: 50%;
+}
+    </style>
+</head>
+<body>
+    <!-- ***** Preloader Start ***** -->
+  <div id="js-preloader" class="js-preloader">
+    <div class="preloader-inner">
+      <span class="dot"></span>
+      <div class="dots">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+  <!-- ***** Preloader End ***** -->
+<!--Header-->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+      <a href="index.html" class="w3-bar-item w3-button">Food Liberty</a>
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="doneesignupp.html" class="w3-bar-item w3-button">Donee</a>
+      </div>
+    </div>
+  </div><br><br>
+  <!--End of Header-->
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="register/images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form name="form1" form method="post" action="donorregisterprocess.php" id="signup-form" class="signup-form" onsubmit="return check( )">
+                        <h2 class="form-title">Create account as Donor </h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="username" id="username" placeholder="*Username"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
+                            <span toggle="#password" style="cursor: pointer;" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="donor_password" id="donor_password" placeholder="Confirm Password"/>
+                            <span toggle="#password" style="cursor: pointer;" class="zmdi zmdi-eye field-icon toggle-donor_password"></span>
+                        </div>
+                        <div class="form-group">                
+		                    <input enctype="multipart/form-data" class="form-input" type="file" name="donorimage" id="donorimage"/>  
+                        <br />  
+                     	</div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="donorfullname" id="donorfullname" placeholder="*Your Full Name"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="outletname" id="outletname" placeholder="*Outlet's Name"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="outlet_type" id="outlet_type" placeholder="*Type of Outlet"/>
+                            <p>(Restaurant, Stall, Bakery, Cafe, etc..)</p><br>
+                        </div>
+                          <div class="form-group">
+                            <input type="registrationnumber" class="form-input" name="registrationnumber" id="registrationnumber" placeholder="*Registration Number"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="Email" class="form-input" name="donoremail" id="donoremail" placeholder="*Your Email"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" class="form-input" name="donorcontact_num" id="donorcontact_num" placeholder="*Contact Number"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="donoraddress" class="form-input" name="donoraddress" id="donoraddress" placeholder="*Address"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="dcity" id="dcity" placeholder="*City"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="dstate" id="dstate" placeholder="*State"/>
+                        </div>
+                         <div class="form-group">
+                            <input type="text" class="form-input" name="dpostcode" id="dpostcode" placeholder="*Postcode"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="hidden" class="form-input" name="usertype" id="usertype" value="1" placeholder="usertype"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group">
+                            <input type=submit name="submit" style="cursor: pointer;" id="Submit" class="form-submit" value="Submit"/>
+                              <p><span class="error"> *Mandatory details</span></p><br>
+                            <input type=reset name="reset" style="cursor: pointer;" id="reset" class="form-submit" value="Reset"/>
+                            
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="logindonor.html" class="loginhere-link">Login here</a><br><br>
+                        <a href="index.html" class="loginhere-link"><i class="fa fa-home"></i></a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script>
+$(".toggle-password").click(function() {
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});    
+</script>
+<script src="main/extra/vendor/jquery/jquery.min.js"></script>
+<script src="main/extra/assets/js/owl-carousel.js"></script>
+<script src="main/extra/assets/js/imagesloaded.js"></script>
+<script src="main/extra/assets/js/custom.js"></script>
+</body>
+</html>

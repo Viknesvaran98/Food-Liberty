@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type=text/javascript> 
+function check( ) 
+{    if ((document.form1.username.value == "") || (document.form1.password.value == "") || (document.form1.ngoname.value == "")) 
+
+{       alert("Please enter all fields");     
+         return false;                  } 
+    else        return true; }
+</script>
+<title>Registration Form</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+body, html{
+  background-color: #767676;
+  height: 100%;
+  line-height: 1.5;
+  
+}
+.myDiv {
+  padding: 20px 0;
+  border: 7px inset coral;   
+  text-align: center;
+  line-height: 1.8;
+  
+  color: black;
+  background-color: silver;
+  margin: 250px;
+ 
+}
+
+/* Full height image header */
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("paint2.jpg");
+  background-repeat: no repeat;
+  min-height: 100%;
+}
+
+.w3-bar .w3-button {
+  padding: 16px;
+}
+.form-style-6
+{
+	font: 95% Arial, helvetica, sans-serif;
+	margin: 10px auto;
+	padding: 16px;
+	background: #343d45;
+	border: 3px solid black;
+	border-radius : 25px;
+}
+.form-style-6 h1
+{
+	background: #43D1AF;
+	padding: 20px 0;
+	font-size: 140%;
+	font-weight: 300;
+	text-align: center;
+	color: #fff;
+	margin: -16px -16px 16px -16px;
+}
+</style>
+</head> 
+ 
+<body> 
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar2">
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+    <a href="index.html" class="w3-bar-item w3-button">GO BACK</a>
+     <a href="donorsignup.html" class="w3-bar-item w3-button">AS DONOR</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container" id="home">
+  <div class="myDiv" style="padding:48px">
+   <form name="form1" method="post" action="doneeregisterprocess.php" onsubmit="return check( )">
+   <img src="images/adminwall6.png" style="width:20%">
+    <br><span style="color:#f6f7f8; font-weight:bold" class="w3-jumbo w3-hide-small">REGISTER AS DONEE</span></br></br>
+    <br><span style="color:white" class="form-style-6">USERNAME : <input name="username" type="text"></input></span></br></br>
+    <br><span style="color:white" class="form-style-6">PASSWORD : <input name="password" type="text"></input></input></span></br></br>
+    <br><span style="color:white" class="form-style-6">FULL NAME : <input name="fullname" type="text"></input></span></br></br>
+    <br><span style="color:white" class="form-style-6">NGO/FOOD CHARITY NAME : <input name="ngoname" type="text"></input></span></br></br>
+    <br><span style="color:white" class="form-style-6">REGISTARTION NUMBER : <input name="ngoregistnum" type="text"></input></span></br></br>
+    <br><span style="color:white" class="form-style-6">EMAIL : <input name="email" type="text"></input></span></br></br>
+    <br><span style="color:white" class="form-style-6">CONTACT NUMBER : <input name="contact_num" type="text"></input></span></br></br>
+    <br><span style="color:white" class="form-style-6">ADDRESS : <input name="doneeaddress" type="text"></input></span></br></br>
+    <br><span style="color:white" class="form-style-6">STATE : <input name="state" type="text"></input></span></br></br>
+    <br><span style="color:white" class="form-style-6">POSTCODE : <input name="postcode" type="text"></input></span></br></br>
+   
+   
+    <br><span style="color:white" class="w3-large"><input type=submit value=Submit></span>
+    <span class="w3-large"><input type=reset value=Reset></span>
+    
+    <tr>
+<td colspan = '2' align = "center">
+<p> Have an account? <a href = "logindonee.html"> Login Here </a></p></td>
+</tr>
+   </form>
+  </div> 
+</header>
+</body> 
+</html> 

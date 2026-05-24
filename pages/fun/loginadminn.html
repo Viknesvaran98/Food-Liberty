@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+
+
+<link rel="stylesheet" href="mainpage/assets/css/templatemo-breezed.css">
+
+
+
+<link href="page/main.css" rel="stylesheet"></head>
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+/* Set the width of the sidebar to 120px */
+.w3-sidebar {width: 120px;background: #222;}
+/* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
+#main {margin-left: 120px}
+/* Remove margins from "page content" on small screens */
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+body {
+	background-image: url("images/adminwall5.jpg");
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	flex-direction: column;
+}
+
+*{
+	font-family: sans-serif;
+	box-sizing: border-box;
+}
+
+form {
+	width: 500px;
+	border: 2px solid #ccc;
+	padding: 30px;
+	background: #fff;
+	border-radius: 15px;
+}
+
+h2 {
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+input {
+	display: block;
+	border: 2px solid #ccc;
+	width: 95%;
+	padding: 10px;
+	margin: 10px auto;
+	border-radius: 5px;
+}
+label {
+	color: #888;
+	font-size: 18px;
+	padding: 10px;
+}
+
+button {
+	float: right;
+	background: #555;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+}
+button:hover{
+	opacity: .7;
+}
+.error {
+   background: #F2DEDE;
+   color: #A94442;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+
+h1 {
+	text-align: center;
+	color: #fff;
+}
+
+a {
+	float: right;
+	background: #555;
+	padding: 10px 15px;
+	color: #fff;
+	border-radius: 5px;
+	margin-right: 10px;
+	border: none;
+	text-decoration: none;
+}
+a:hover{
+	opacity: .7;
+}
+
+
+</style>
+<head>
+	<link rel="shortcut icon" href="images/logo/favicon.ico" type="image/x-icon" />
+	<title>WELCOME ADMIN</title>
+
+</head>
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="index.html" class="w3-bar-item w3-button w3-wide">FOOD LIBERTY SYSTEM</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="logindonor.html" class="w3-bar-item w3-button"><i class="fa fa-user"></i> DONOR</a>
+      <a href="logindonee.html" class="w3-bar-item w3-button"><i class="fa fa-user-o"></i> DONEE</a>
+      <a href="index.html" class="w3-bar-item w3-button"><i class="fa fa-home"></i> BACK</a>
+    </div> </div> </div>
+<body>
+	<!-- ***** Preloader Start ***** -->
+	<div id="preloader">
+		<div class="jumper">
+				<div></div>
+				<div></div>
+				<div></div>
+		</div>
+</div>  
+<!-- ***** Preloader End ***** -->
+     <form action="loginadminprocess.php" method="post">
+     	<h2>WELCOME ADMIN</h2>
+     	
+     	<label>USERNAME: </label>
+     	<input type="text" name="username" placeholder="User Name"><br>
+
+     	<label>PASSWORD :</label>
+     	<input type="adminpassword" name="adminpassword" placeholder="Password"><br>
+
+     	<button type="reset">Reset</button>
+     	<button type="submit">Submit</button>
+     	<a href="index.html">Back</a>
+      
+
+
+  </form>
+	 <!-- jQuery -->
+	 <script src="mainpage/assets/js/jquery-2.1.0.min.js"></script>
+
+	 <!-- Bootstrap -->
+	 <script src="mainpage/assets/js/popper.js"></script>
+	 
+	 <!-- Plugins -->
+	 <script src="mainpage/assets/js/owl-carousel.js"></script>
+	 <script src="mainpage/assets/js/scrollreveal.min.js"></script>
+	 <script src="mainpage/assets/js/slick.js"></script> 
+	 <script src="mainpage/assets/js/isotope.js"></script> 
+	 
+	 <!-- Global Init -->
+	 <script src="mainpage/assets/js/custom.js"></script>
+</body>
+</html>

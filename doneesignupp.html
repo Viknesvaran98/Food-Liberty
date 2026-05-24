@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<link rel="shortcut icon" href="images/logo/favicon.ico" type="image/x-icon" />
+<script type=text/javascript> 
+function check( ) 
+{    if ((document.form1.doneeusername.value == "") || (document.form1.password.value == "") || (document.form1.ngoname.value == "") || (document.form1.password.value == "") || (document.form1.fullname.value == "") || (document.form1.ngoregistnum.value == "") || (document.form1.email.value == "") || (document.form1.contact_num.value == "") || (document.form1.doneeaddress.value == "") || (document.form1.state.value == "") || (document.form1.postcode.value == "")) 
+
+{       alert("Please enter all fields");     
+         return false;                  } 
+    else        return true; }
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+    <title>Sign Up Form As Donee</title>
+<!-- Bootstrap CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css'>
+<!-- Font Awesome CSS -->
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css'>
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="register/fonts/material-icon/css/material-design-iconic-font.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="register/css/style.css">
+    <!-- Extra css -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js">
+
+  
+
+    
+    <style>
+        .error {color: #FF0000;}
+        h2 {
+    line-height: 1.66;
+    margin: 0;
+    padding: 0;
+    font-weight: 900;
+    color: #222;
+    font-family: 'Montserrat';
+    font-size: 24px;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/** Preloader */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1000;
+}
+#loader {
+    display: block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    width: 150px;
+    height: 150px;
+    margin: -75px 0 0 -75px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #3498db;
+
+    -webkit-animation: spin 2s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 2s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+
+    z-index: 1001;
+}
+#loader:before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #e74c3c;
+
+    -webkit-animation: spin 3s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+    animation: spin 3s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+#loader:after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border-radius: 50%;
+    border: 3px solid transparent;
+    border-top-color: #f9c922;
+
+    -webkit-animation: spin 1.5s linear infinite; /* Chrome, Opera 15+, Safari 5+ */
+      animation: spin 1.5s linear infinite; /* Chrome, Firefox 16+, IE 10+, Opera */
+}
+
+@-webkit-keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+@keyframes spin {
+    0%   { 
+        -webkit-transform: rotate(0deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(0deg);  /* IE 9 */
+        transform: rotate(0deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+    100% {
+        -webkit-transform: rotate(360deg);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: rotate(360deg);  /* IE 9 */
+        transform: rotate(360deg);  /* Firefox 16+, IE 10+, Opera */
+    }
+}
+
+#loader-wrapper .loader-section {
+    position: fixed;
+    top: 0;
+    width: 51%;
+    height: 100%;
+    background: #222222;
+    z-index: 1000;
+    -webkit-transform: translateX(0);  /* Chrome, Opera 15+, Safari 3.1+ */
+    -ms-transform: translateX(0);  /* IE 9 */
+    transform: translateX(0);  /* Firefox 16+, IE 10+, Opera */
+}
+
+#loader-wrapper .loader-section.section-left {
+    left: 0;
+}
+
+#loader-wrapper .loader-section.section-right {
+    right: 0;
+}
+
+/* Loaded */
+.loaded #loader-wrapper .loader-section.section-left {
+    -webkit-transform: translateX(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(-100%);  /* IE 9 */
+            transform: translateX(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+            transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader-wrapper .loader-section.section-right {
+    -webkit-transform: translateX(100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateX(100%);  /* IE 9 */
+            transform: translateX(100%);  /* Firefox 16+, IE 10+, Opera */
+
+-webkit-transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);  
+    transition: all 0.7s 0.3s cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.loaded #loader {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;  
+            transition: all 0.3s ease-out;
+}
+.loaded #loader-wrapper {
+    visibility: hidden;
+
+    -webkit-transform: translateY(-100%);  /* Chrome, Opera 15+, Safari 3.1+ */
+        -ms-transform: translateY(-100%);  /* IE 9 */
+            transform: translateY(-100%);  /* Firefox 16+, IE 10+, Opera */
+
+    -webkit-transition: all 0.3s 1s ease-out;  
+            transition: all 0.3s 1s ease-out;
+}
+/* end Preloader */
+    </style>
+</head>
+
+<body>
+<!-- Preloader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+  </div>
+  <!-- End Preloader -->   
+    
+<!--Header-->
+<div class="w3-top">
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+      <a href="index.html" class="w3-bar-item w3-button">Food Liberty</a>
+      <!-- Right-sided navbar links. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="donorsignupp.html" class="w3-bar-item w3-button">Donor</a>
+      </div>
+    </div>
+  </div><br><br>
+  <!--End of Header-->
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="register/images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+                <div class="signup-content">
+                    <form name="form1" form method="post" action="doneeregisterprocess.php" id="signup-form" class="signup-form" onsubmit="return check( )">
+                        <h2 class="form-title">Create account as Donee </h2>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="doneeusername" id="doneeusername" placeholder="*Username"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="password" id="password" placeholder="Password"/>
+                            <span toggle="#password" style="cursor: pointer;" class="zmdi zmdi-eye field-icon toggle-password"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" class="form-input" name="donee_password" id="donee_password" placeholder="Confirm Password"/>
+                            <span toggle="#donee_password" style="cursor: pointer;" class="zmdi zmdi-eye field-icon toggle-donee_password"></span>
+                        </div>
+                        <div class="form-group">                
+		                    <input enctype="multipart/form-data" class="form-input" type="file" name="doneeimage" id="doneeimage"/>  
+                        <br />  
+                     	</div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="fullname" id="fullname" placeholder="*Volunteer/Representative's Full Name"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="ngoname" id="ngoname" placeholder="*Organization's Name"/>
+                        </div>
+                        <div class="form-group"><label for="lang">Type of ID No. :</label>
+                          <select name="typeofid" id="typeofid" class="btn btn-info dropdown-toggle">
+                            <option value="Registration Number">Registration Number</option>
+                            <option value="Representative's ID No.">Representative's ID No.</option>
+                          </select></div>
+                          
+                        <div class="form-group">
+                            <input type="ngoregistnum" class="form-input" name="ngoregistnum" id="ngoregistnum" placeholder="*Registration Number/Representative's ID No."/>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" class="form-input" name="email" id="email" placeholder="*Your Email"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="contact_num" class="form-input" name="contact_num" id="contact_num" placeholder="*Contact Number"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="doneeaddress" id="doneeaddress" placeholder="*Address"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="city" id="city" placeholder="*City"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-input" name="state" id="state" placeholder="*State"/>
+                        </div>
+                         <div class="form-group">
+                            <input type="postcode" class="form-input" name="postcode" id="postcode" placeholder="*Postcode"/>
+                        </div>
+                        <div class="form-group">
+                            <input type="checkbox" name="agree-term" id="agree-term" class="agree-term" />
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>I agree all statements in  <a href="#" class="term-service">Terms of service</a></label>
+                        </div>
+                        <div class="form-group">
+                            <input type=submit name="submit" style="cursor: pointer;" id="Submit" class="form-submit" value="Sign up"/>
+                            <p><span class="error"> *Mandatory details</span></p><br>
+                            <input type=reset name="reset" style="cursor: pointer;" id="reset" class="form-submit" value="Reset"/>
+                            
+                        </div>
+                    </form>
+                    <p class="loginhere">
+                        Have already an account ? <a href="logindonee.html" class="loginhere-link">Login here</a><br><br>
+                        <a href="index.html" class="loginhere-link"><i class="fa fa-home"></i></a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+     <script>
+     const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#password');
+ 
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});</script>
+
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.2/jquery.min.js'></script>
+<script>
+$(".toggle-password").click(function() {
+  $(this).toggleClass("fa-eye fa-eye-slash");
+  var input = $($(this).attr("toggle"));
+  if (input.attr("type") == "password") {
+    input.attr("type", "text");
+  } else {
+    input.attr("type", "password");
+  }
+});    
+</script>
+
+
+<script type="text/javascript" src="pages/new/js/jquery-1.11.2.min.js"></script>      <!-- jQuery -->
+<script type="text/javascript" src="pages/new/js/templatemo-script.js"></script>    
+</body>
+</html>

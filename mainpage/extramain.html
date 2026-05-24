@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html>
+<title>Food Liberty System</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+body, html {
+  height: 100%;
+  line-height: 1.8;
+}
+.bgimg-1 {
+  background-position: center;
+  background-size: cover;
+  background-image: url("images/back2.jpg");
+  min-height: 100%;
+}
+.w3-bar w3-button {
+  padding: 16px;
+}
+
+
+</style>
+<body id="myPage">
+
+
+<!-- Navbar -->
+<div class="w3-top">
+ <div class="w3-bar w3-theme-d2 w3-left-align">
+  <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2" href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+  <a href="#home" class="w3-bar-item w3-button w3-wide w3-teal"><i class="fa fa-home w3-margin-right"></i>Food Liberty System</a>
+    <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button w3-wide" title="SignIn"> Sign In <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="logindonor.html" class="w3-bar-item w3-button">Donor</a>
+      <a href="logindonee.html" class="w3-bar-item w3-button">Donee</a>
+      <a href="loginadmin.html" class="w3-bar-item w3-button">Administrator</a>
+    </div>
+  </div>
+  <div class="w3-dropdown-hover w3-hide-small">
+    <button class="w3-button w3-wide" title="SignUp"> Sign Up <i class="fa fa-caret-down"></i></button>     
+    <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+      <a href="donorsignupp.html" class="w3-bar-item w3-button">Donor</a>
+      <a href="doneesignupp.html" class="w3-bar-item w3-button">Donee</a>
+     
+    </div>
+  </div>
+  <a href="#work" class="w3-bar-item w3-wide w3-button w3-hide-small w3-hover-white">Work</a>
+  <a href="#team" class="w3-bar-item w3-wide w3-button w3-hide-small w3-hover-white">Team</a>
+  <a href="#about" class="w3-bar-item w3-wide w3-button w3-hide-small w3-hover-white">How It Works</a>
+  <a href="#pricing" class="w3-bar-item w3-wide w3-button w3-hide-small w3-hover-white">About</a>
+  <a href="#contact" class="w3-bar-item w3-wide w3-button w3-hide-small w3-hover-white">Contact</a>
+  <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i class="fa fa-search"></i></a>
+ </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+      <a href="logindonor.html" class="w3-bar-item w3-wide w3-button">SignIn As Donor</a>
+      <a href="logindonee.html" class="w3-bar-item w3-wide w3-button">SignIn AsDonee</a>
+      <a href="loginadmin.html" class="w3-bar-item w3-wide w3-button">SignIn As Administrator</a>
+      <a href="donorsignupp.html" class="w3-bar-item w3-wide w3-button">Register As Donor</a>
+      <a href="doneesignupp.html" class="w3-bar-item w3-wide w3-button">Register As Donee</a>
+    <a href="#about" class="w3-bar-item w3-button w3-wide">How It Works</a>
+    <a href="#pricing" class="w3-bar-item w3-button w3-wide">About</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-wide">Contact</a>
+    <a href="#" class="w3-bar-item w3-button">Search</a>
+  </div>
+</div>
+
+<!-- Image Header -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">We protect us.</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium">We protect us.</span><br>
+    <span class="w3-large">Cutting food waste is a delicious way of saving money, helping to feed the world and protect the planet.</span>
+    <p><a href="#about" class="w3-button w3-white w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off">Learn more and start today</a></p>
+  </div> 
+  <div class="w3-display-bottomleft w3-text-grey w3-large" style="padding:24px 48px">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+    <i class="fa fa-instagram w3-hover-opacity"></i>
+    <i class="fa fa-snapchat w3-hover-opacity"></i>
+    <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+    <i class="fa fa-twitter w3-hover-opacity"></i>
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </div>
+</header>
+
+
+<!-- Team Container -->
+<!-- Team Section -->
+<div class="w3-container" style="padding:128px 16px" id="team">
+  <h2 class="w3-center w3-wide">Our Team</h2>
+  <div class="w3-row-padding w3-grayscale" style="margin-top:64px">
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="images/team3.jpg" alt="Dan" style="width:100%">
+        <div class="w3-container">
+          <h3>John Doe</h3>
+          <p class="w3-opacity">CEO & Founder</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="images/team1.jfif" alt="Jane" style="width:100%">
+        <div class="w3-container">
+          <h3>Anja Doe</h3>
+          <p class="w3-opacity">Art Director</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="images/team4.jpg" alt="Mike" style="width:100%">
+        <div class="w3-container">
+          <h3>Mike Ross</h3>
+          <p class="w3-opacity">Web Designer</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+    <div class="w3-col l3 m6 w3-margin-bottom">
+      <div class="w3-card">
+        <img src="images/team2.jpg" alt="Dan" style="width:100%">
+        <div class="w3-container">
+          <h3>Dan Star</h3>
+          <p class="w3-opacity">Designer</p>
+          <p><button class="w3-button w3-light-grey w3-block"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+<div class="w3-quarter">
+  <h2 class="w3-wide">Our Work</h2>
+<p>Our job is to save the surplus and food items that are discarded or even rejected. If you are a restaurant owner, bakery shops owner, hoteliers, food court owners whose food has lost its commercial value such as out of specifications, almost expired, excess stock and close to the date Best Before or Use By but still safe for human use, you can donate it to here for donnes who will make redistribution to people in need from here.</p>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="images/donate1.jpg" alt="Kuala Lumpur" style="width:100%">
+  <div class="w3-container">
+  <h5 class="w3-wide">Kuala Lumpur</h5>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="images/donate2.jpg" alt="Selangor" style="width:100%">
+  <div class="w3-container">
+  <h5 class="w3-wide">Selangor</h5>
+  </div>
+  </div>
+</div>
+
+<div class="w3-quarter">
+<div class="w3-card w3-white">
+  <img src="images/donate3.jpeg" alt="Pulau Pinang" style="width:100%">
+  <div class="w3-container">
+  <h5 class="w3-wide">Pulau Pinang</h5>
+
+
+  </div>
+  </div>
+</div>
+
+</div><br><br>
+
+
+<!-- About Section -->
+<div class="w3-container" id="about">
+  <div class="w3-content w3-center w3-light-grey" style="width:100%;max-width:5000px">
+    <h2 class="w3-center w3-padding-64 w3-wide">How It Works</h2>
+      <img src="images/service.png" style="width:100%;max-width:1500px" class="w3-margin-top"><br><br><br><br>
+  </div>
+</div>
+
+
+<!-- About Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+     <h3 class="w3-center w3-wide">About Us</h3>
+   
+    <img class="w3-image w3-round-large" src="images/adminwall6.png" alt="Buildings" width="400" height="194">
+    <p>We aim to rescue surplus food from the restaurant, , bakery shops, food courts and hotel industry; 
+    sort and re-distribute it to the Non-Governmental Organizations(NGOs), charity home and welfare center 
+    through our strategic partners to reduce food waste and to help to ease and lessen the cost of living of the underprivileged Malaysian. </p><br>
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">OBJECTIVE</p>
+        </li>
+        <li class="w3-padding-16"><b>To coordinate, plan and carry out the collection of surplus food nationwide.</b></li>
+         
+       
+        
+      </ul>
+    </div>
+
+  <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">MISSION</p>
+        </li>
+        <li class="w3-padding-16"><b>Food Liberty targets "Zero Hunger" and "Zero Waste" and safe food supply in Malaysia.</b></li>
+ 
+       
+        
+      </ul>
+    </div>
+    
+    <div class="w3-third w3-margin-bottom">
+      <ul class="w3-ul w3-border w3-hover-shadow">
+        <li class="w3-theme">
+          <p class="w3-xlarge">VISION</p>
+        </li>
+        <li class="w3-padding-16"><b>Become the Leader of Food Bank domestically and internationally by 2025.</b></li>
+       
+       
+        
+      </ul>
+    </div>
+</div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+  <div class="w3-row">
+    <div class="w3-col m5">
+    <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Contact Us</span></div>
+      <h3>Address</h3>
+      <p>Swing by for a cup of coffee, or whatever.</p>
+      <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i> Kuala Lumpur, MY</p>
+      <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i> +60149711618</p>
+      <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i> foodliberty@gmail.com</p>
+    </div>
+    <div class="w3-col m7">
+      <form class="w3-container w3-card-4 w3-padding-16 w3-white" action="/action_page.php" target="_blank">
+      <div class="w3-section">      
+        <label>Name</label>
+        <input class="w3-input" type="text" name="Name" required>
+      </div>
+      <div class="w3-section">      
+        <label>Email</label>
+        <input class="w3-input" type="text" name="Email" required>
+      </div>
+      <div class="w3-section">      
+        <label>Message</label>
+        <input class="w3-input" type="text" name="Message" required>
+      </div>  
+      <input class="w3-check" type="checkbox" checked name="Like">
+      <label>I Like it!</label>
+      <button type="submit" class="w3-button w3-right w3-theme">Send</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- Image of location/map -->
+<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%;">
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-d1 w3-center">
+  <h4>Follow Us</h4>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-google-plus"></i></a>
+  <a class="w3-button w3-large w3-teal" href="javascript:void(0)" title="Google +"><i class="fa fa-instagram"></i></a>
+  <a class="w3-button w3-large w3-teal w3-hide-small" href="javascript:void(0)" title="Linkedin"><i class="fa fa-linkedin"></i></a><br><br>
+    <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+</footer>
+<script>
+// Script for side navigation
+function w3_open() {
+  var x = document.getElementById("mySidebar");
+  x.style.width = "300px";
+  x.style.paddingTop = "10%";
+  x.style.display = "block";
+}
+
+// Close side navigation
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+}
+
+// Used to toggle the menu on smaller screens when clicking on the menu button
+function openNav() {
+  var x = document.getElementById("navDemo");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else { 
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+</script>
+
+</body>
+</html>
