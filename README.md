@@ -1,5 +1,5 @@
 Online Excess Food Donation Website
--A web platform that connects food donors with people in need to reduce food waste.
+- An online platform that connects food donors (restaurants, outlets, households) with people in need (donees) and administrators - reducing food waste while making redistribution simple, auditable, and secure.
 
 ## Features
 - User registration- Donor & donee
